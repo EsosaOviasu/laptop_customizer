@@ -9,7 +9,7 @@ const USCurrencyFormat = new Intl.NumberFormat('en-US', {
 
 class FeatureItem extends Component {
     render() {
-        const itemHash = this.props.indiItemHash
+        const itemHash = this.props.indieItemHash
         const feature = this.props.indiFeature
         const item = this.props.indiItem
         console.log(this.props.selected)

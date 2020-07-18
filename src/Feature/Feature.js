@@ -14,6 +14,7 @@ class Feature extends Component {
                     indiItemHash={itemHash}
                     indiFeature={feature}
                     indiItem={item}
+                    key={itemHash}
                     selected={this.props.selectedState}
                     updateFeature={this.props.updateHandle}/>
                 )

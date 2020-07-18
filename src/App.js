@@ -49,6 +49,8 @@ class App extends React.Component {
   render() {
     
     const featureObj = this.state.selected
+    console.log(555)
+    console.log(this.state.selected.Processor.cost)
     const total = Object.keys(this.state.selected).reduce(
       (acc, curr) => acc + this.state.selected[curr].cost,
       0
@@ -60,7 +62,7 @@ class App extends React.Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-          <MainForm featureStore={this.props.features} featObj={featureObj} handleUpdate={() => this.updateFeature()}/>
+          <MainForm featureStore={this.props.features} featObj={featureObj} handleUpdate={(feat,newVal) => this.updateFeature(feat,newVal)}/>
           <MainSummary mainTotal={total} featObj={featureObj}/>
         </main>
       </div>
